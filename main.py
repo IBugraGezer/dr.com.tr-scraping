@@ -35,6 +35,7 @@ for pageNo in range(currentPage,555):
         try:
             data = getBookData(productLink, pageNo)
             dumpJsonToFile(data, indent, "books/" + str(pageNo))
+            print("sayfa: " + str(pageNo))
         except urllib.error.URLError:
             errorLog("urllib.error.URLError", productLink)
             continue
