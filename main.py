@@ -2,8 +2,8 @@ from dr import *
 from helpers import *
 import urllib
 
-
-for pageNo in range(1,555):
+currentPage = int(input("Şu sayfadan itibaren işlem yapılsın:"))
+for pageNo in range(currentPage,555):
     
     path = "books/" + str(pageNo)
     if not os.path.exists(path):
