@@ -28,9 +28,9 @@ def dumpJsonToFile(data, indent, path):
     file.close()
     print("KAYDEDİLDİ")
     
-def errorLog(errorTitle, data):
+def errorLog(errorTitle, data, pageNo):
     file = open("logs.log", "a")
-    file.write(errorTitle + ": " + data + "\n")
+    file.write(errorTitle + ": page:" + str(pageNo) + " " + data + "\n")
     file.close()
     
 def slugify(value):

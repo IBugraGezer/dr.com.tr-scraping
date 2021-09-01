@@ -37,10 +37,10 @@ for pageNo in range(currentPage,555):
             dumpJsonToFile(data, indent, "books/" + str(pageNo))
             print("sayfa: " + str(pageNo))
         except urllib.error.URLError:
-            errorLog("urllib.error.URLError", productLink)
+            errorLog("urllib.error.URLError", productLink, pageNo)
             continue
         except:
-            errorLog("error", productLink)
+            errorLog("error", productLink, pageNo)
             continue
         
     file = open(jsonFilePath, "a")
